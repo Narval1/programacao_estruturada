@@ -1,0 +1,39 @@
+/*
+Implemente um algoritmo que declare uma matriz de tamanho linha × coluna, sendo linha = coluna e devem ser DEFINIDAS pelo USUÁRIO. Preencha com 1 a DIAGONAL PRINCIPAL e com 0 os DEMAIS ELEMENTOS. Ao final, ESCREVA a matriz obtida na tela.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+//cria um vetor de ponteiros
+int **createArray(int line, int row){
+  //alocaçao dinamica da  matriz
+  int **array = malloc(sizeof(int *)*line);
+  for (int i = 0; i < line; i++) array[i] = (int *)malloc(sizeof(int)*row);
+  //leitura dos valores
+  for (int i = 0; i < line; i++){
+    for (int j = 0; j < row; j++){
+      if (i == j) array[i][j] = 1;
+      else array[i][j] = 0;
+    }
+  }
+  return array;
+}
+//imprime o vetor criado
+void printArray(int **array, int line, int row){
+  for (int i = 0; i < line; i++){
+    for (int j = 0; j < row; j++){
+      printf("%d ", array[i][j]);
+    }
+    printf("\n");
+  }
+}
+
+void main(){
+    int row, line, number;
+    scanf("%d", &number);
+    row = line = number;
+    int **array = createArray(row, line);
+    printArray(array, row, line);
+}
