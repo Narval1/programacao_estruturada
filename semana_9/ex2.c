@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Elabore um programa que leia do usuário o tamanho de um vetor a ser lido. 
 Em seguida, faça a alocação dinâmica desse vetor. 
@@ -17,3 +18,6 @@ void main() {
   array = NULL;
   printf("\n");
 }
+=======
+teste de branch 
+>>>>>>> cd5054dd5863c3d873ce0e24bdeb3bc650411f33
