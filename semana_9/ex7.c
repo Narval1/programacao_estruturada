@@ -10,8 +10,8 @@ char *createPointer(int size, char *str) {
 void main() {
   int size = 6;
   char str[size], *pointer = NULL;
-
-  fgets(str,6,stdin);
+  
+  scanf("%s", str);
 
   pointer = createPointer(size, str);
   for (int i = 1; i < size; i++) printf("%c ", pointer[i]);
